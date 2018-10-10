@@ -7,7 +7,6 @@ import org.apache.jmeter.control.LoopController
 import org.apache.jmeter.protocol.http.control.CacheManager
 import org.apache.jmeter.protocol.http.control.CookieManager
 import org.apache.jmeter.protocol.http.sampler.HTTPSampler
-import org.apache.jmeter.protocol.java.sampler.JavaSampler
 import org.apache.jmeter.testelement.TestPlan
 import org.apache.jmeter.threads.ThreadGroup
 import org.apache.jorphan.collections.HashTree
@@ -56,16 +55,14 @@ class SimpleAutomaticTask : JMeterTestPlan {
                 .addTransition("step1", "end")
                 .process
 
-        val actor = Actor()
-        actor.addUser("walter.bates")
-        val actorMapping = ActorMapping()
-        actorMapping.addActor(actor)
-
-        val businessArchive = BusinessArchiveBuilder().createNewBusinessArchive()
+        return BusinessArchiveBuilder().createNewBusinessArchive()
                 .setProcessDefinition(process)
-                .setActorMapping(actorMapping)
+                .setActorMapping(ActorMapping().apply {
+                    addActor(Actor().apply {
+                        addUser("walter.bates")
+                    })
+                })
                 .done()
-        return businessArchive
     }
 
     private fun createUser(apiClient: APIClient) {
