@@ -58,7 +58,7 @@ class SimpleAutomaticTask : JMeterTestPlan {
         return BusinessArchiveBuilder().createNewBusinessArchive()
                 .setProcessDefinition(process)
                 .setActorMapping(ActorMapping().apply {
-                    addActor(Actor().apply {
+                    addActor(Actor("actor").apply {
                         addUser("walter.bates")
                     })
                 })
