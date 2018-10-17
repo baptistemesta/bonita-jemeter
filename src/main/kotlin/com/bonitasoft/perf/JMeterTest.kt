@@ -28,7 +28,6 @@ class JMeterTest {
         test.setup(apiClient, host, port)
 
 
-
         configureOutput(jmeterDir, test)
 
         // Run Test Plan

@@ -21,7 +21,6 @@
     <Loggers>
         <Root level="INFO" additivity="false">
             <AppenderRef ref="console" />
-            <AppenderRef ref="rollingFile" />
         </Root>
     </Loggers>
 </Configuration>
