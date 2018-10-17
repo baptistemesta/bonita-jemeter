@@ -29,7 +29,7 @@
           <collectionProp name="Arguments.arguments">
             <elementProp name="processID" elementType="Argument">
               <stringProp name="Argument.name">processID</stringProp>
-              <stringProp name="Argument.value">9204279289477798316</stringProp>
+              <stringProp name="Argument.value">___processID___</stringProp>
               <stringProp name="Argument.desc">SingleAutomaticTaskWithStartEndEvents 1.0</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
@@ -41,13 +41,13 @@
             </elementProp>
             <elementProp name="serverURL" elementType="Argument">
               <stringProp name="Argument.name">serverURL</stringProp>
-              <stringProp name="Argument.value">bonitalb-1662063562.eu-west-1.elb.amazonaws.com</stringProp>
+              <stringProp name="Argument.value">___serverURL___</stringProp>
               <stringProp name="Argument.desc">Laod Balancer Server URL</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="serverPort" elementType="Argument">
               <stringProp name="Argument.name">serverPort</stringProp>
-              <stringProp name="Argument.value">80</stringProp>
+              <stringProp name="Argument.value">___serverPort___</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
           </collectionProp>
